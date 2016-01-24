@@ -1,0 +1,15 @@
+!!!
+%html
+  %head
+    %link{:href => "favicon.ico", :rel => "icon"}/
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Sim
+    = csrf_meta_tags
+    = action_cable_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+  %body
+    = render "shared/header"
+    .container.main-container
+      = yield
+    = render "shared/footer"
